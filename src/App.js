@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
+import Header from './components/Header';
 import './App.css';
+import beagleLogo from './assets/images/beagle-logo.png';
 
 function App() {
   return (
     <div className="App">
+      <Header title="The Beagle Todo List" titleMobile="Beagle Todo" logo={beagleLogo} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />

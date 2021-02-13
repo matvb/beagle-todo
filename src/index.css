@@ -1,3 +1,8 @@
+:root {
+  --green: #50bd92;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +16,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.header {
+  border-bottom: 3px solid var(--green);
+  padding: 15px 30px;
+  height: 70px;
+  position: relative;
+}
+
+.header .title, .header .titleMobile {
+  color: var(--green);
+  font-size: 26px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+}
+
+.header .logo {
+  float: left;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.logo-container {
+  float: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hide-for-desktop {
+    display: none !important;;
+  }
+}
+
