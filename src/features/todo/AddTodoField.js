@@ -24,6 +24,11 @@ export const AddTodoField = () => {
     }
   }
 
+  const keyPress = (e) => {
+    if(e.key == "Enter"){
+      onAddTodoClicked()
+   }
+ }
 
   return (
     <section>
@@ -35,6 +40,7 @@ export const AddTodoField = () => {
             className="todo-content"
             value={content}
             onChange={onContentChanged}
+            onKeyPress={(e) => keyPress(e)}
           />
       </div>
     </section>
