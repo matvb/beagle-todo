@@ -30,6 +30,12 @@ export const TodoList = () => {
     )
   }
 
+  const onBlurHandler = (todoContent, todoId) => {
+    if (todoContent == '') {
+      onDelTodoClicked(todoId)
+    }
+  }
+
   const renderedTodos = todos.map(todo => (
     <div className="todo-item" key={todo.id}>
       <button type="button" className="todo-btn" onClick={() => onDelTodoClicked(todo.id)}><div className="btn-del-todo"></div></button>
@@ -38,6 +44,7 @@ export const TodoList = () => {
             className="todo-content"
             value={todo.content}
             onChange={(e) => onEditTodoClicked(e.target.value, todo.id)}
+            onBlur={(e) => onBlurHandler(e.target.value, todo.id)}
           />
     </div>
   ))
