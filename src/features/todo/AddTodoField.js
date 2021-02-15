@@ -27,15 +27,16 @@ export const AddTodoField = () => {
 
 
   return (
-    <div className="todo-item todo-item-add">
-        <button type="button" className="todo-btn" onClick={onAddTodoClicked} ><div className="btn-add-todo"></div></button>
-        <input
-          id="todoContentField"
-          className="todo-content"
-          value={content}
-          onChange={onContentChanged}
-        />
-        
-    </div>
+    <section>
+      <div className="todo-item todo-item-add">
+          <button type="button" className="todo-btn" onClick={onAddTodoClicked} ><div className="btn-add-todo"></div></button>
+          <input
+            id="todoContentField"
+            className="todo-content"
+            value={content}
+            onChange={onContentChanged}
+          />
+      </div>
+    </section>
   )
 }

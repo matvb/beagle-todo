@@ -11,8 +11,10 @@ function App() {
   return (
     <div className="App">
       <Header title="The Beagle Todo List" titleMobile="Beagle Todo" logo={beagleLogo} />
-      <AddTodoField />
-      <TodoList />
+      <section className="main-content">
+        <AddTodoField />
+        <TodoList />
+      </section>
     </div>
   );
 }

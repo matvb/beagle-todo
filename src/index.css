@@ -1,6 +1,8 @@
 :root {
   --green: #50bd92;
   --gray: #909090;
+  --green-transparent: #50bd9270;
+  --gray-transparent: #90909050;
 }
 
 
@@ -11,6 +13,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+#root, .App {
+  height: 100vh;
 }
 
 code {
@@ -64,7 +71,7 @@ code {
 
 .todo-item {
   width: 400px;
-  margin: 0 auto;
+  margin: 10px auto;
   display: flex;
 }
 
@@ -76,13 +83,19 @@ code {
   width: 100%;
 }
 
+#todoContentField:focus {
+  opacity: 1;
+  border-color: var(--green);
+  outline: none;
+}
+
 .todo-item .todo-btn, .todo-item .todo-content  {
   background: none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding:10px;
   font-size: 20px;
   color: var(--green);
-  border-color: var(--gray);
+  border-color: var(--gray-transparent);
   border-style: solid;
   transition: 0.4s;
   border-width: 2px;
@@ -90,22 +103,27 @@ code {
   margin: 0;
   height: 50px;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.todo-item .todo-btn:focus, .todo-item .todo-content:focus {
+  outline: none;
 }
 
 .todo-btn {
   padding: 0 !important;
   min-width: 50px;
+  margin: 0 15px 0 0 !important;
 }
 
 
 
 .todo-item-add .todo-btn, .todo-item-add .todo-content {
-  opacity: 0.5;
-  border-color: var(--green);
+  border-color: var(--green-transparent);
 }
 
 .todo-btn:hover {
-  background: var(--green);
+  background: var(--green-transparent);
   color: white;
   transition: 0.4s;
 }
@@ -119,6 +137,7 @@ code {
   height: 30px;
   width: 30px;
   margin: auto;
+  opacity: 0.7;
 }
 
 
@@ -134,4 +153,8 @@ code {
 
 button:hover > .btn-add-todo, button:hover > .btn-del-todo {
   background-image: url(./assets/images/cross-white.svg);
+}
+
+section.main-content{
+  margin-top: 50px;
 }
