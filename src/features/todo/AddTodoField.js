@@ -25,7 +25,7 @@ export const AddTodoField = () => {
   }
 
   const keyPress = (e) => {
-    if(e.key == "Enter"){
+    if(e.key === "Enter"){
       onAddTodoClicked()
    }
  }

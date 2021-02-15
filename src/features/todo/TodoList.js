@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { todoDeleted } from './todosSlice'
 import { todoUpdated } from './todosSlice'
@@ -8,9 +8,6 @@ export const TodoList = () => {
   const todos = useSelector(state => state.todos)
   
   const dispatch = useDispatch()
-
-  const [content, setContent] = useState('')
-  const onContentChanged = e => setContent(e.target.value)
 
   const onDelTodoClicked = (todoId) => {
     dispatch(
@@ -31,7 +28,7 @@ export const TodoList = () => {
   }
 
   const onBlurHandler = (todoContent, todoId) => {
-    if (todoContent == '') {
+    if (todoContent === '') {
       onDelTodoClicked(todoId)
     }
   }
