@@ -1,3 +1,4 @@
+/* SITE COLORS */
 :root {
   --green: #50bd92;
   --gray: #909090;
@@ -29,7 +30,19 @@ code {
     monospace;
 }
 
+@media only screen and (max-width: 601px) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+}
 
+@media only screen and (min-width: 601px) {
+  .hide-for-desktop {
+    display: none !important;;
+  }
+}
+
+/* HEADER */
 .header {
   border-bottom: 3px solid var(--green);
   padding: 15px 30px;
@@ -61,18 +74,18 @@ code {
   float: left;
 }
 
-@media only screen and (max-width: 601px) {
-  .hide-for-mobile {
+@media only screen and (max-width: 300px)  {
+  .logo-container .logo{
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .titleMobile {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 601px) {
-  .hide-for-desktop {
-    display: none !important;;
-  }
-}
-
+/* TODO LIST AND ITEMS */
 .todo-item {
   margin: 10px auto;
   display: flex;
@@ -137,14 +150,13 @@ code {
 }
 
 
-/* Button Image */
+/* BUTTOM IMAGE */
 .add-todo-icon, .del-todo-icon {
   height: 30px;
   width: 30px;
   margin: auto;
   opacity: 0.7;
 }
-
 
 .add-todo-icon{
   background-image: url(./assets/images/cross-green.svg);
@@ -159,6 +171,7 @@ button:hover > .add-todo-icon, button:hover > .del-todo-icon {
   background-image: url(./assets/images/cross-white.svg);
 }
 
+/* SIZE OF CONTENT AREA */
 section.main-content{
   margin: 50px auto;
   padding-bottom: 50px;
@@ -180,16 +193,8 @@ section.main-content{
   }
 }
 
-@media only screen and (max-width: 300px)  {
-  .logo-container .logo{
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-  .titleMobile {
-    display: none !important;
-  }
-}
+
+
 
 
 section.footer {
