@@ -13,7 +13,6 @@ export const AddTodoField = () => {
   const onContentChanged = e => setContent(e.target.value)
 
   const onAddTodoClicked = () => {
-    console.log('foi')
     if (content) {
       dispatch(
         todoAdded({
@@ -31,6 +30,7 @@ export const AddTodoField = () => {
       <div className="todo-item todo-item-add">
           <button type="button" className="todo-btn" onClick={onAddTodoClicked} ><div className="btn-add-todo"></div></button>
           <input
+            autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false"
             id="todoContentField"
             className="todo-content"
             value={content}
