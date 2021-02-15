@@ -1,5 +1,6 @@
 :root {
   --green: #50bd92;
+  --gray: #909090;
 }
 
 
@@ -61,3 +62,76 @@ code {
   }
 }
 
+.todo-item {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.todo-btn {
+  width: 40px;
+}
+
+.todo-content {
+  width: 100%;
+}
+
+.todo-item .todo-btn, .todo-item .todo-content  {
+  background: none;
+  border-radius: 5px;
+  padding:10px;
+  font-size: 20px;
+  color: var(--green);
+  border-color: var(--gray);
+  border-style: solid;
+  transition: 0.4s;
+  border-width: 2px;
+  font-weight: bold;
+  margin: 0;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.todo-btn {
+  padding: 0 !important;
+  min-width: 50px;
+}
+
+
+
+.todo-item-add .todo-btn, .todo-item-add .todo-content {
+  opacity: 0.5;
+  border-color: var(--green);
+}
+
+.todo-btn:hover {
+  background: var(--green);
+  color: white;
+  transition: 0.4s;
+}
+
+#todoContentField {
+  resize: none;
+}
+
+/* Button Image */
+.btn-add-todo, .btn-del-todo {
+  height: 30px;
+  width: 30px;
+  margin: auto;
+}
+
+
+
+.btn-add-todo{
+  background-image: url(./assets/images/cross-green.svg);
+}
+
+.btn-del-todo {
+  background-image: url(./assets/images/cross-gray.svg);
+  transform: rotate(45deg);
+}
+
+button:hover > .btn-add-todo, button:hover > .btn-del-todo {
+  background-image: url(./assets/images/cross-white.svg);
+}

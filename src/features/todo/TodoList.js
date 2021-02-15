@@ -17,15 +17,14 @@ export const TodoList = () => {
   }
 
   const renderedTodos = todos.map(todo => (
-    <article className="todo-excerpt" key={todo.id}>
+    <div className="todo-item" key={todo.id}>
+      <button type="button" className="todo-btn" onClick={() => onDelTodoClicked(todo.id)}><div className="btn-del-todo"></div></button>
       <p className="todo-content">{todo.content.substring(0, 100)}</p>
-      <button type="button" onClick={() => onDelTodoClicked(todo.id)}>-</button>
-    </article>
+    </div>
   ))
 
   return (
     <section className="todos-list">
-      <h2>Todos</h2>
       {renderedTodos}
     </section>
   )

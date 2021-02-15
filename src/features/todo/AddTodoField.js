@@ -13,6 +13,7 @@ export const AddTodoField = () => {
   const onContentChanged = e => setContent(e.target.value)
 
   const onAddTodoClicked = () => {
+    console.log('foi')
     if (content) {
       dispatch(
         todoAdded({
@@ -24,18 +25,17 @@ export const AddTodoField = () => {
     }
   }
 
+
   return (
-    <section>
-      <h2>Add Todo</h2>
-      <form>
-        <textarea
-          id="todoContent"
-          name="todoContent"
+    <div className="todo-item todo-item-add">
+        <button type="button" className="todo-btn" onClick={onAddTodoClicked} ><div className="btn-add-todo"></div></button>
+        <input
+          id="todoContentField"
+          className="todo-content"
           value={content}
           onChange={onContentChanged}
         />
-        <button type="button" onClick={onAddTodoClicked}>+</button>
-      </form>
-    </section>
+        
+    </div>
   )
 }
