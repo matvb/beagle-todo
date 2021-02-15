@@ -5,7 +5,6 @@
   --gray-transparent: #90909050;
 }
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -171,5 +170,16 @@ section.main-content{
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   section.main-content{
     width: 60%;
+  }
+}
+
+@media only screen and (max-width: 300px)  {
+  .logo-container .logo{
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .titleMobile {
+    display: none !important;
   }
 }
