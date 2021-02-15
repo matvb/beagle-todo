@@ -126,6 +126,7 @@ code {
   outline: none;
 }
 
+/* BUTTONS */
 .todo-btn {
   padding: 0 !important;
   min-width: 50px;
@@ -194,9 +195,7 @@ section.main-content{
 }
 
 
-
-
-
+/* FOOTER */
 section.footer {
   position: fixed;
   width: 100vw;
