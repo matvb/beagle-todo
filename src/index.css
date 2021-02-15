@@ -14,10 +14,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  width: 100vw;
 }
 
 #root, .App {
   height: 100vh;
+  width: 100vw;
 }
 
 code {
@@ -57,7 +59,7 @@ code {
   float: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 601px) {
   .hide-for-mobile {
     display: none !important;
   }
@@ -70,7 +72,6 @@ code {
 }
 
 .todo-item {
-  width: 400px;
   margin: 10px auto;
   display: flex;
 }
@@ -116,8 +117,6 @@ code {
   margin: 0 15px 0 0 !important;
 }
 
-
-
 .todo-item-add .todo-btn, .todo-item-add .todo-content {
   border-color: var(--green-transparent);
 }
@@ -156,5 +155,21 @@ button:hover > .btn-add-todo, button:hover > .btn-del-todo {
 }
 
 section.main-content{
-  margin-top: 50px;
+  margin: 50px auto 0 auto;
+  width: 35%;
+}
+
+@media only screen and (max-width: 600px)  {
+  section.main-content{
+    width: 80%;
+  }
+  .todo-item .todo-content{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  section.main-content{
+    width: 60%;
+  }
 }
