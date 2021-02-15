@@ -38,7 +38,7 @@ export const TodoList = () => {
 
   const renderedTodos = todos.map(todo => (
     <div className="todo-item" key={todo.id}>
-      <button type="button" className="todo-btn" onClick={() => onDelTodoClicked(todo.id)}><div className="btn-del-todo"></div></button>
+      <button type="button" className="todo-btn todo-del-btn" onClick={() => onDelTodoClicked(todo.id)}><div className="del-todo-icon"></div></button>
       <input
             autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false"
             className="todo-content"

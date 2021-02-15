@@ -28,7 +28,7 @@ export const AddTodoField = () => {
   return (
     <section>
       <div className="todo-item todo-item-add">
-          <button type="button" className="todo-btn" onClick={onAddTodoClicked} ><div className="btn-add-todo"></div></button>
+          <button type="button" className="todo-btn todo-add-btn" onClick={onAddTodoClicked} ><div className="add-todo-icon"></div></button>
           <input
             autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false"
             id="todoContentField"

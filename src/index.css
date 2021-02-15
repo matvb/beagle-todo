@@ -1,8 +1,10 @@
 :root {
   --green: #50bd92;
   --gray: #909090;
+  --red: #bd5069;
   --green-transparent: #50bd9270;
   --gray-transparent: #90909050;
+  --red-transparent: #bd506950;
 }
 
 body {
@@ -14,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 #root, .App {
@@ -121,17 +124,21 @@ code {
 }
 
 .todo-btn:hover {
-  background: var(--green-transparent);
   color: white;
   transition: 0.4s;
 }
 
-#todoContentField {
-  resize: none;
+.todo-add-btn:hover {
+  background: var(--green-transparent);
 }
 
+.todo-del-btn:hover {
+  background: var(--red-transparent);
+}
+
+
 /* Button Image */
-.btn-add-todo, .btn-del-todo {
+.add-todo-icon, .del-todo-icon {
   height: 30px;
   width: 30px;
   margin: auto;
@@ -139,22 +146,22 @@ code {
 }
 
 
-
-.btn-add-todo{
+.add-todo-icon{
   background-image: url(./assets/images/cross-green.svg);
 }
 
-.btn-del-todo {
+.del-todo-icon {
   background-image: url(./assets/images/cross-gray.svg);
   transform: rotate(45deg);
 }
 
-button:hover > .btn-add-todo, button:hover > .btn-del-todo {
+button:hover > .add-todo-icon, button:hover > .del-todo-icon {
   background-image: url(./assets/images/cross-white.svg);
 }
 
 section.main-content{
-  margin: 50px auto 0 auto;
+  margin: 50px auto;
+  padding-bottom: 50px;
   width: 35%;
 }
 
@@ -182,4 +189,19 @@ section.main-content{
   .titleMobile {
     display: none !important;
   }
+}
+
+
+section.footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  border-top: 1px solid var(--green);
+  background-color: white;
+}
+
+section.footer p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: var(--green)
 }
